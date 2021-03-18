@@ -42,7 +42,7 @@ npm install
 
 ## Development
 ### Run
-npm run react-dev to start webpack watchdog for React changes
-Open (http://localhost:3000/) to view in browser
+* npm run react-dev to start webpack watchdog for React changes
+* Open http://localhost:3000/ to view in browser
 
 
