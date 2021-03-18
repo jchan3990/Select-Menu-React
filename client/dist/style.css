@@ -30,8 +30,7 @@
   flex-direction: column;
   overflow: scroll;
   position: absolute;
-  min-height: 0px;
-  height: 216px;
+  max-height: 216px;
   top: 45px;
   width: 356px;
 }
