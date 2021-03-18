@@ -30,13 +30,13 @@ const hotelsObject = [
 ## Usage
 * Pass data as props (see above formats) to component
 ```javascript
-<SelectMenu data={arrayData}/>
+<SelectMenu data={data}/>
 ```
 * Pressing tab once focus on component: `tabIndex=0`
 * Using the drop down
   * Click to see all options
   * Type to narrow down matching options
-    * 0 Matches returns 'No Matches' message
+    * 0 Matches returns 'No Options' message
 
 ## Install Dependencies
 npm install
