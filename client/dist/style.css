@@ -53,7 +53,7 @@
 .select-menu-container {
   display: flex;
   justify-content: flex-end;
-  left: 50%;
+  left: 30%;
   position: relative;
   min-height: 0px;
   max-height: 216px;
@@ -85,7 +85,7 @@ img {
 
 label {
   font-family: Arial;
-  left: 50%;
+  left: 30%;
   position: relative;
 }
 

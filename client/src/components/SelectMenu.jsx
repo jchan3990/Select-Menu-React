@@ -89,6 +89,7 @@ const SelectMenu = ({ data }) => {
         name="search"
         placeholder="Select..."
         value={search}
+        tabIndex="0"
         onChange={(e) => {
           setSearch(e.target.value);
           setVisible(true);
