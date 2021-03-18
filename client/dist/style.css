@@ -26,8 +26,7 @@
 
 .dropdown-menu-container {
   border: 2px solid lightgrey;
-  border-radius: 0px 0px 5px 5px;
-  border-top: none;
+  border-radius: 5px;
   box-shadow: 5px 5px 5px lightgrey;
   display: flex;
   flex-direction: column;
@@ -48,6 +47,7 @@
 
 .menu-option:hover {
   cursor: pointer;
+  background: lightskyblue;
 }
 
 .select-menu-container {
