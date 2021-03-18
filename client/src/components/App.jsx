@@ -6,7 +6,8 @@ import { arrayData, objectData } from '../data/arrayData.js';
 const App = () => {
   return (
     <div className="app">
-      <SelectMenu data={objectData}/>
+      <label><b>Select your favorite anime:</b></label>
+      <SelectMenu data={arrayData}/>
     </div>
   )
 };

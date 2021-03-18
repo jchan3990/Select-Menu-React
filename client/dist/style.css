@@ -1,5 +1,8 @@
 /* App */
 .app {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
   height: 100%;
   width: 100%;
 }
@@ -32,7 +35,7 @@
   position: absolute;
   max-height: 216px;
   top: 45px;
-  width: 356px;
+  width: 316px;
 }
 
 .menu-option {
@@ -50,11 +53,11 @@
 .select-menu-container {
   display: flex;
   justify-content: flex-end;
-  margin: 50px auto 0px auto;
+  left: 50%;
   position: relative;
   min-height: 0px;
   max-height: 216px;
-  width: 360px;
+  width: 320px;
 }
 
 .select-menu-container input {
@@ -63,7 +66,7 @@
   font-size: 18px;
   height: 36px;
   padding: 10px;
-  width: 360px;
+  width: 320px;
 }
 
 .separator {
@@ -76,8 +79,14 @@
 }
 
 img {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
+}
+
+label {
+  font-family: Arial;
+  left: 50%;
+  position: relative;
 }
 
 
