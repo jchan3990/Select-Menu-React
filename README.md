@@ -25,3 +25,24 @@ const objectData = [
   {'value': 'My Hero Acadamia', 'logo': './images/mha.jpeg'}
 ]
 ```
+
+## Usage
+* Pass data as props (see above formats) to component
+```javascript
+<SelectMenu data={arrayData}/>
+```
+* Pressing tab once focus on component: `tabIndex=0`
+* Using the drop down
+  * Click to see all options
+  * Type to narrow down matching options
+    * 0 Matches returns 'No Matches' message
+
+## Install Dependencies
+npm install
+
+## Development
+### Run
+npm run react-dev to start webpack watchdog for React changes
+Open (http://localhost:3000/) to view in browser
+
+
