@@ -6,7 +6,6 @@ import { animeArray, animeObject, carsArray, hotelsObject } from '../data/sample
 const App = () => {
   return (
     <div className="app">
-      {/* <label><b>Select your favorite anime:</b></label> */}
       <SelectMenu data={hotelsObject}/>
     </div>
   )
