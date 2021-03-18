@@ -27,3 +27,12 @@ export const carsArray = [
   ['Ferrari','./images/ferrari.jpeg'],
   ['Lamborghini','./images/lambo.jpeg']
 ];
+
+export const hotelsObject = [
+  {'value': 'Motel 6', 'logo': './images/m6.png'},
+  {'value': 'Best Western', 'logo': './images/bw.png'},
+  {'value': 'Hyatt', 'logo': './images/hyatt.png'},
+  {'value': 'Marriot', 'logo': './images/marriot.png'},
+  {'value': 'Sheraton', 'logo': './images/sheraton.png'},
+  {'value': 'Hilton', 'logo': './images/hilton.png'},
+]

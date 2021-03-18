@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 import SelectMenu from './SelectMenu.jsx';
-import { animeArray, animeObject, carsArray } from '../data/sampleData.js';
+import { animeArray, animeObject, carsArray, hotelsObject } from '../data/sampleData.js';
 
 const App = () => {
   return (
     <div className="app">
       {/* <label><b>Select your favorite anime:</b></label> */}
-      <SelectMenu data={carsArray}/>
+      <SelectMenu data={hotelsObject}/>
     </div>
   )
 };
