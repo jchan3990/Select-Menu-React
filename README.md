@@ -4,25 +4,26 @@
 A drop down select React component that accepts data as a list of arrays or as objects.
 Eg. List of Arrays:
 ```javascript
-const arrayData = [
-  ['Jiu Jitsu Kaisen', './images/jjk.jpeg'],
-  ['One Piece', './images/onepiece.jpeg'],
-  ['Naruto', './images/naruto.jpeg'],
-  ['Attack on Titan', './images/AoT.jpeg'],
-  ['Food Wars', './images/fw.jpeg'], ['Pokemon', './images/pikachu.jpeg'],
-  ['My Hero Acadamia', './images/mha.jpeg']
-]
+const carsArray = [
+  ['BMW','./images/bmw.jpeg'],
+  ['Honda','./images/honda.png'],
+  ['Toyota','./images/toyota.jpeg'],
+  ['Nissan','./images/nissan.jpeg'],
+  ['Chevrolet','./images/chevy.png'],
+  ['Ford','./images/ford.png'],
+  ['Ferrari','./images/ferrari.jpeg'],
+  ['Lamborghini','./images/lambo.jpeg']
+];
 ```
 Eg. List of Objects:
 ```javascript
-const objectData = [
-  {'value': 'Jiu Jitsu Kaisen', 'logo': './images/jjk.jpeg'},
-  {'value': 'One Piece', 'logo': './images/onepiece.jpeg'},
-  {'value': 'Naruto', 'logo': './images/naruto.jpeg'},
-  {'value': 'Attack on Titan', 'logo': './images/AoT.jpeg'},
-  {'value': 'Food Wars', 'logo': './images/fw.jpeg'},
-  {'value': 'Pokemon', 'logo': './images/pikachu.jpeg'},
-  {'value': 'My Hero Acadamia', 'logo': './images/mha.jpeg'}
+const hotelsObject = [
+  {'value': 'Motel 6', 'logo': './images/m6.png'},
+  {'value': 'Best Western', 'logo': './images/bw.png'},
+  {'value': 'Hyatt', 'logo': './images/hyatt.png'},
+  {'value': 'Marriot', 'logo': './images/marriot.png'},
+  {'value': 'Sheraton', 'logo': './images/sheraton.png'},
+  {'value': 'Hilton', 'logo': './images/hilton.png'},
 ]
 ```
 
