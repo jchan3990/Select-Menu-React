@@ -42,7 +42,6 @@ const SelectMenu = ({ data }) => {
     }
 
     if (e.keyCode === 38) {
-      console.log(cursor)
       if (cursor > 0) setCursor(cursor - 1);
       if (Array.isArray(data[cursor])) setSearch(data[cursor][0]);
       else setSearch(data[cursor].value)
