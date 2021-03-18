@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 const SelectMenu = ({ data }) => {
   const [search, setSearch] = useState('');
   const [isVisible, setVisible] = useState(false);
+  const [cursor, setCursor] = useState(-1);
 
   const wrapperRef = useRef(null);
 
@@ -23,6 +24,32 @@ const SelectMenu = ({ data }) => {
     setSearch(selected);
     setVisible(false);
   };
+
+  const handleKeyboardNav = e => {
+    if (e.keyCode === 40) {
+      if (!isVisible) setVisible(!isVisible);
+      if (cursor < data.length - 1) {
+        setCursor(cursor + 1);
+        if (cursor !== -1) {
+          if (Array.isArray(data[cursor])) setSearch(data[cursor][0]);
+          else setSearch(data[cursor].value)
+        }
+      } else {
+        setCursor(cursor);
+        if (Array.isArray(data[cursor])) setSearch(data[cursor][0]);
+        else setSearch(data[cursor].value)
+      }
+    }
+
+    if (e.keyCode === 38) {
+      console.log(cursor)
+      if (cursor > 0) setCursor(cursor - 1);
+      if (Array.isArray(data[cursor])) setSearch(data[cursor][0]);
+      else setSearch(data[cursor].value)
+    }
+
+    if (e.keyCode === 27) setVisible(false);
+  }
 
   const downArrow = (
     <svg onClick={() => setVisible(!isVisible)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -46,7 +73,7 @@ const SelectMenu = ({ data }) => {
   if (Array.isArray(data[0]) && isVisible && data.filter(option => option[0].toLowerCase().includes(search.toLowerCase())).length > 0) {
     optionMenu = (
       <div className="dropdown-menu-container">
-        {data.filter(option => option[0].toLowerCase().includes(search.toLowerCase()))
+        {data.filter((option, i) => option[0].toLowerCase().includes(search.toLowerCase()))
           .map((match, i) => (
             <div className="menu-option" key={i} onClick={() => clickOption(match[0])}>
               <span style={{marginLeft: "10px", fontFamily: "Arial"}} key={i}>{match[0]}</span>
@@ -59,7 +86,7 @@ const SelectMenu = ({ data }) => {
   } else if (!Array.isArray(data[0]) && isVisible && data.filter(option => option.value.toLowerCase().includes(search.toLowerCase())).length > 0){
     optionMenu = (
       <div className="dropdown-menu-container">
-        {data.filter(option => option.value.toLowerCase().includes(search.toLowerCase()))
+        {data.filter((option, i) => option.value.toLowerCase().includes(search.toLowerCase()))
           .map((match, i) => (
             <div className="menu-option" key={i} onClick={() => clickOption(match.value)}>
               <span style={{marginLeft: "10px", fontFamily: "Arial"}} key={i}>{match.value}</span>
@@ -90,11 +117,12 @@ const SelectMenu = ({ data }) => {
         placeholder="Select..."
         value={search}
         tabIndex="0"
-        onChange={(e) => {
+        onChange={e => {
           setSearch(e.target.value);
           setVisible(true);
         }}
         onClick={() => setVisible(!isVisible)}
+        onKeyDown={e => handleKeyboardNav(e)}
       />
       <div className="buttons-container">
         {xBtn}

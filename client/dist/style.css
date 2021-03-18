@@ -50,6 +50,10 @@
   background: lightskyblue;
 }
 
+.menu-option:focus {
+  background: lightskyblue;
+}
+
 .select-menu-container {
   display: flex;
   justify-content: flex-end;
