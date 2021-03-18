@@ -1,0 +1,65 @@
+/* App */
+.app {
+  height: 100%;
+  width: 100%;
+}
+
+/* Dropdown Menu */
+.arrow-icon-container {
+  margin: 0px 10px;
+  position: absolute;
+  right: 0px;
+  top: 6px;
+}
+
+.clear-search-btn {
+  position: absolute;
+  float: right;
+  right: 40px;
+  top: 7px;
+}
+
+.dropdown-menu-container {
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  min-height: 0px;
+  height: 216px;
+  width: 100%;
+}
+
+.menu-option {
+  display: flex;
+  height: 36px;
+  justify-content: space-between;
+  line-height: 36px;
+}
+
+.select-menu-container {
+  margin: 50px auto 0px auto;
+  position: relative;
+  min-height: 0px;
+  max-height: 216px;
+  width: 360px;
+}
+
+.select-menu-container input {
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  font-size: 18px;
+  height: 36px;
+  padding: 10px;
+  width: 360px;
+}
+
+img {
+
+}
+
+
+
+
+
+
