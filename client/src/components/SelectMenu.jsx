@@ -43,7 +43,7 @@ const SelectMenu = ({ data }) => {
   );
 
   let optionMenu;
-  if (Array.isArray(data)) {
+  if (Array.isArray(data[0])) {
     if (isVisible && data.filter(option => option[0].toLowerCase().includes(search.toLowerCase())).length > 0) {
       optionMenu = (
         <div className="dropdown-menu-container">
@@ -67,7 +67,28 @@ const SelectMenu = ({ data }) => {
       )
     };
   } else {
-    optionMenu = (<div></div>)
+    if (isVisible && data.filter(option => option.value.toLowerCase().includes(search.toLowerCase())).length > 0) {
+      optionMenu = (
+        <div className="dropdown-menu-container">
+          {data.filter(option => option.value.toLowerCase().includes(search.toLowerCase()))
+            .map((match, i) => (
+              <div className="menu-option" key={i} onClick={() => clickOption(match.value)}>
+                <span style={{marginLeft: "10px"}} key={i}>{match.value} </span>
+                <img style={{marginRight: "10px"}} src={match.logo} alt={`${match.value}`} />
+              </div>
+            ))
+          }
+        </div>
+      )
+    } else if (isVisible) {
+      optionMenu = (
+        <div className="dropdown-menu-container">
+          <div className="menu-option">
+            <h1 style={{color: "lightgrey", margin: "0 auto"}}>No Matches</h1>
+          </div>
+        </div>
+      )
+    };
   }
 
   let arrow;
