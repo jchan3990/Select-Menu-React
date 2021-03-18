@@ -1,13 +1,13 @@
-export const arrayData = [
+export const animeArray = [
   ['Jiu Jitsu Kaisen', './images/jjk.jpeg'],
   ['One Piece', './images/onepiece.jpeg'],
   ['Naruto', './images/naruto.jpeg'],
   ['Attack on Titan', './images/AoT.jpeg'],
   ['Food Wars', './images/fw.jpeg'], ['Pokemon', './images/pikachu.jpeg'],
   ['My Hero Acadamia', './images/mha.jpeg']
-]
+];
 
-export const objectData = [
+export const animeObject = [
   {'value': 'Jiu Jitsu Kaisen', 'logo': './images/jjk.jpeg'},
   {'value': 'One Piece', 'logo': './images/onepiece.jpeg'},
   {'value': 'Naruto', 'logo': './images/naruto.jpeg'},
@@ -15,4 +15,15 @@ export const objectData = [
   {'value': 'Food Wars', 'logo': './images/fw.jpeg'},
   {'value': 'Pokemon', 'logo': './images/pikachu.jpeg'},
   {'value': 'My Hero Acadamia', 'logo': './images/mha.jpeg'}
-]
+];
+
+export const carsArray = [
+  ['BMW','./images/bmw.jpeg'],
+  ['Honda','./images/honda.png'],
+  ['Toyota','./images/toyota.jpeg'],
+  ['Nissan','./images/nissan.jpeg'],
+  ['Chevrolet','./images/chevy.png'],
+  ['Ford','./images/ford.png'],
+  ['Ferrari','./images/ferrari.jpeg'],
+  ['Lamborghini','./images/lambo.jpeg']
+];
