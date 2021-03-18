@@ -43,28 +43,32 @@ const SelectMenu = ({ data }) => {
   );
 
   let optionMenu;
-  if (isVisible && data.filter(option => option[0].toLowerCase().includes(search.toLowerCase())).length > 0) {
-    optionMenu = (
-      <div className="dropdown-menu-container">
-        {data.filter(option => option[0].toLowerCase().includes(search.toLowerCase()))
-          .map((match, i) => (
-            <div className="menu-option" key={i} onClick={() => clickOption(match[0])}>
-              <span style={{marginLeft: "10px"}} key={i}>{match[0]} </span>
-              <img style={{marginRight: "10px"}} src={match[1]} alt={`${match[0]}`} />
-            </div>
-          ))
-        }
-      </div>
-    )
-  } else if (isVisible) {
-    optionMenu = (
-      <div className="dropdown-menu-container">
-        <div className="menu-option">
-          <h1 style={{color: "lightgrey", margin: "0 auto"}}>No Matches</h1>
+  if (Array.isArray(data)) {
+    if (isVisible && data.filter(option => option[0].toLowerCase().includes(search.toLowerCase())).length > 0) {
+      optionMenu = (
+        <div className="dropdown-menu-container">
+          {data.filter(option => option[0].toLowerCase().includes(search.toLowerCase()))
+            .map((match, i) => (
+              <div className="menu-option" key={i} onClick={() => clickOption(match[0])}>
+                <span style={{marginLeft: "10px"}} key={i}>{match[0]} </span>
+                <img style={{marginRight: "10px"}} src={match[1]} alt={`${match[0]}`} />
+              </div>
+            ))
+          }
         </div>
-      </div>
-    )
-  };
+      )
+    } else if (isVisible) {
+      optionMenu = (
+        <div className="dropdown-menu-container">
+          <div className="menu-option">
+            <h1 style={{color: "lightgrey", margin: "0 auto"}}>No Matches</h1>
+          </div>
+        </div>
+      )
+    };
+  } else {
+    optionMenu = (<div></div>)
+  }
 
   let arrow;
   isVisible ? arrow = upArrow : arrow = downArrow;
