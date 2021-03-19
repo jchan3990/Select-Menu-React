@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import 'regenerator-runtime/runtime';
+import './App.css';
 
 import SelectMenu from './SelectMenu.jsx';
 import { animeArray, animeObject, carsArray, hotelsObject } from '../data/sampleData.js';

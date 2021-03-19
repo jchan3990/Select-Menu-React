@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import './SelectMenu.css';
 
 const SelectMenu = ({ data }) => {
   const [search, setSearch] = useState('');
