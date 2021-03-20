@@ -1,5 +1,5 @@
 export const animeArray = [
-  ['Jiu Jitsu Kaisen', './images/jjk.jpeg'],
+  ['Jujutsu Kaisen', './images/jjk.jpeg'],
   ['One Piece', './images/onepiece.jpeg'],
   ['Naruto', './images/naruto.jpeg'],
   ['Attack on Titan', './images/AoT.jpeg'],
@@ -8,7 +8,7 @@ export const animeArray = [
 ];
 
 export const animeObject = [
-  {'value': 'Jiu Jitsu Kaisen', 'logo': './images/jjk.jpeg'},
+  {'value': 'Jujutsu Kaisen', 'logo': './images/jjk.jpeg'},
   {'value': 'One Piece', 'logo': './images/onepiece.jpeg'},
   {'value': 'Naruto', 'logo': './images/naruto.jpeg'},
   {'value': 'Attack on Titan', 'logo': './images/AoT.jpeg'},
