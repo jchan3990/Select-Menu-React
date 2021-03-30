@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
+  "name": "Single-Select-React",
   "version": "1.0.0",
-  "description": "React Boilerplate",
+  "description": "Single select menu for React",
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jchan3990/React-BoilerPlate.git"
+    "url": "git+https://github.com/jchan3990/Select-Menu-React.git"
   },
   "author": "Jchan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jchan3990/React-BoilerPlate/issues"
+    "url": "https://github.com/jchan3990/Select-Menu-React/issues"
   },
-  "homepage": "https://github.com/jchan3990/React-BoilerPlate#readme",
+  "homepage": "https://github.com/jchan3990/Select-Menu-React#readme",
   "devDependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
