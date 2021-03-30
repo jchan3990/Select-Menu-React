@@ -1,0 +1,2 @@
+# Ignore App component files
+client/src/components/App.*
