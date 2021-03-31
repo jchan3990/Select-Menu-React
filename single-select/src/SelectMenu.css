@@ -25,7 +25,7 @@
   position: absolute;
   max-height: 216px;
   top: 45px;
-  width: 316px;
+  width: inherit;
   z-index: 10;
 }
 

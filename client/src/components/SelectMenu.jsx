@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './SelectMenu.css';
 
-const SelectMenu = ({ data }) => {
+const SelectMenu = ({ data, cb }) => {
   const [search, setSearch] = useState('');
   const [isVisible, setVisible] = useState(false);
   const [cursor, setCursor] = useState(-1);
@@ -119,6 +119,7 @@ const SelectMenu = ({ data }) => {
         tabIndex="0"
         onChange={e => {
           setSearch(e.target.value);
+          cb(search);
           setVisible(true);
         }}
         onClick={() => setVisible(!isVisible)}

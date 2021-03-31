@@ -2,13 +2,36 @@ import React, { useState, useEffect } from 'react';
 import 'regenerator-runtime/runtime';
 import './App.css';
 
-import SelectMenu from 'single-select-react-jc';
+// import SelectMenu from 'single-select-react-jc';
+import SelectMenu from './SelectMenu.jsx';
 import { animeArray, animeObject, carsArray, hotelsObject } from '../data/sampleData.js';
 
 const App = () => {
+  const [options, setOptions] = useState([]);
+  useEffect(() => {
+    fetch(`https://private-anon-6a5be50f2b-carsapi1.apiary-mock.com/manufacturers`)
+      .then(response => {
+        response.json()
+        .then(data => {
+          let newOptions = [];
+          data.forEach(d => {
+            let tmp = [];
+            tmp.push(d.name, d.img_url);
+            newOptions.push(tmp);
+          })
+
+          setOptions(newOptions);
+        })
+      })
+  }, [])
+
+  const cb = (out) => {
+    console.log(out);
+  }
+
   return (
     <div className="app">
-      <SelectMenu data={hotelsObject}/>
+      {options.length > 0 && <SelectMenu data={options} cb={cb}/>}
     </div>
   )
 };
