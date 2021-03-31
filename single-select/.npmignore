@@ -1,0 +1,4 @@
+# Ignore files from publishing
+/src
+.babelrc
+webpack.config.js
