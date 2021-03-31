@@ -1,2 +1,7 @@
 # Ignore App component files
 client/src/components/App.*
+
+# Ignore node_modules
+.DS_Store
+node_modules
+client/src
