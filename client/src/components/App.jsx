@@ -37,7 +37,6 @@ const App = () => {
           onChange={onChange}
           centered
           size="small"
-          disabled
         />
       }
     </div>
