@@ -25,13 +25,20 @@ const App = () => {
       })
   }, [])
 
-  const cb = (out) => {
-    console.log(out);
+  const onChange = (change) => {
+    console.log(change);
   }
 
   return (
     <div className="app">
-      {options.length > 0 && <SelectMenu data={options} cb={cb}/>}
+      {options.length > 0 &&
+        <SelectMenu
+          data={options}
+          onChange={onChange}
+          centered
+          size="small"
+        />
+      }
     </div>
   )
 };

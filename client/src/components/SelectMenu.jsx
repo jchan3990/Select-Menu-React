@@ -1,7 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './SelectMenu.css';
+import clsx from 'clsx';
 
-const SelectMenu = ({ data, cb }) => {
+import { useKeyOnly, useValueAndKey, ueyOrValueAndKey } from '../utils/classNameBuilder';
+
+const SelectMenu = (props) => {
+  const { data, onChange, centered, floated, size} = props;
+
+  const classes = clsx(
+    'select-menu-container',
+    useKeyOnly(centered, 'centered'),
+    useValueAndKey(floated, 'floated'),
+    useValueAndKey(size, 'size')
+  )
+
+  console.log(classes)
+
   const [search, setSearch] = useState('');
   const [isVisible, setVisible] = useState(false);
   const [cursor, setCursor] = useState(-1);
@@ -110,7 +124,7 @@ const SelectMenu = ({ data, cb }) => {
   isVisible ? arrow = upArrow : arrow = downArrow;
 
   return (
-    <div className="select-menu-container" ref={wrapperRef}>
+    <div className={classes} ref={wrapperRef}>
       <input
         type="text"
         name="search"
@@ -119,7 +133,7 @@ const SelectMenu = ({ data, cb }) => {
         tabIndex="0"
         onChange={e => {
           setSearch(e.target.value);
-          cb(search);
+          onChange(search);
           setVisible(true);
         }}
         onClick={() => setVisible(!isVisible)}

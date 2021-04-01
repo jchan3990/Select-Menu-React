@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
+    "clsx": "^1.1.1",
     "css-loader": "^5.2.0",
     "regenerator-runtime": "^0.13.7",
     "style-loader": "^2.0.0",
