@@ -96,6 +96,7 @@ Settings if no prop attributes are provided by user.
   min-height: 0px;
   max-height: 216px;
   width: 100%;
+  min-width: 10%;
 }
 
 

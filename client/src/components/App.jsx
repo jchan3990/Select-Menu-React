@@ -37,6 +37,7 @@ const App = () => {
           onChange={onChange}
           centered
           size="small"
+          striped
         />
       }
     </div>

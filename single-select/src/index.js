@@ -1,7 +1,27 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './SelectMenu.css';
+import clsx from 'clsx';
 
-const SelectMenu = ({ data }) => {
+import { useKeyOnly, useValueAndKey, ueyOrValueAndKey } from '../utils/classNameBuilder';
+
+const SelectMenu = (props) => {
+  const { data, onChange, centered, disabled, floated, size, striped} = props;
+
+  const selectMenuClasses = clsx(
+    'select-menu-container',
+    useKeyOnly(centered, 'centered'),
+    useValueAndKey(floated, 'floated'),
+    useKeyOnly(disabled, 'disabled'),
+    useValueAndKey(size, 'size'),
+  )
+
+  const optionsClasses = clsx(
+    'menu-option',
+    useKeyOnly(striped, 'striped'),
+  )
+
+  console.log(selectMenuClasses, optionsClasses)
+
   const [search, setSearch] = useState('');
   const [isVisible, setVisible] = useState(false);
   const [cursor, setCursor] = useState(-1);
@@ -75,7 +95,7 @@ const SelectMenu = ({ data }) => {
       <div className="dropdown-menu-container">
         {data.filter((option, i) => option[0].toLowerCase().includes(search.toLowerCase()))
           .map((match, i) => (
-            <div className="menu-option" key={i} onClick={() => clickOption(match[0])}>
+            <div className={optionsClasses} key={i} onClick={() => clickOption(match[0])}>
               <span style={{marginLeft: "10px", fontFamily: "Arial"}} key={i}>{match[0]}</span>
               <img style={{marginRight: "10px"}} src={match[1]} alt={`${match[0]}`} />
             </div>
@@ -88,7 +108,7 @@ const SelectMenu = ({ data }) => {
       <div className="dropdown-menu-container">
         {data.filter((option, i) => option.value.toLowerCase().includes(search.toLowerCase()))
           .map((match, i) => (
-            <div className="menu-option" key={i} onClick={() => clickOption(match.value)}>
+            <div className={optionsClasses} key={i} onClick={() => clickOption(match.value)}>
               <span style={{marginLeft: "10px", fontFamily: "Arial"}} key={i}>{match.value}</span>
               <img style={{marginRight: "10px"}} src={match.logo} alt={`${match.value}`} />
             </div>
@@ -99,7 +119,7 @@ const SelectMenu = ({ data }) => {
   } else if (isVisible) {
     optionMenu = (
       <div className="dropdown-menu-container">
-        <div className="menu-option">
+        <div className={optionsClasses}>
           <h1 style={{color: "lightgrey", margin: "0 auto"}}>No Matches</h1>
         </div>
       </div>
@@ -110,7 +130,7 @@ const SelectMenu = ({ data }) => {
   isVisible ? arrow = upArrow : arrow = downArrow;
 
   return (
-    <div className="select-menu-container" ref={wrapperRef}>
+    <div className={selectMenuClasses} ref={wrapperRef}>
       <input
         type="text"
         name="search"
@@ -119,6 +139,7 @@ const SelectMenu = ({ data }) => {
         tabIndex="0"
         onChange={e => {
           setSearch(e.target.value);
+          onChange(search);
           setVisible(true);
         }}
         onClick={() => setVisible(!isVisible)}

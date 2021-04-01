@@ -1,3 +1,7 @@
+/******************************************************************
+                              Static
+Styles that don't need to change / Constrained by parent container.
+******************************************************************/
 .buttons-container {
   align-items: center;
   display: flex;
@@ -8,24 +12,26 @@
 }
 
 .clear-search-btn {
-  background: white;
+  background-color: white;
   border: none;
-  color: lightgrey;
+  color: inherit;
   font-size: 16px;
 }
 
 .dropdown-menu-container {
-  background-color: white;
+  background-color: inherit;
   border: 2px solid lightgrey;
   border-radius: 5px;
   box-shadow: 5px 5px 5px lightgrey;
+  color: inherit;
   display: flex;
   flex-direction: column;
   overflow: scroll;
   position: absolute;
   max-height: 216px;
+  left: 0px;
+  right: 0px;
   top: 45px;
-  width: inherit;
   z-index: 10;
 }
 
@@ -46,23 +52,9 @@
   background: lightskyblue;
 }
 
-.select-menu-container {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 auto;
-  position: relative;
-  min-height: 0px;
-  max-height: 216px;
-  width: 320px;
-}
-
-.select-menu-container input {
-  border: 2px solid lightgrey;
-  border-radius: 5px;
-  font-size: 18px;
-  height: 36px;
-  padding: 10px;
-  width: 320px;
+img {
+  height: 25px;
+  width: 25px;
 }
 
 .separator {
@@ -74,7 +66,84 @@
   height: 20px;
 }
 
-img {
-  height: 25px;
-  width: 25px;
+.select-menu-container input {
+  background-color: inherit;
+  border: 2px solid lightgrey;
+  border-radius: inherit;
+  color: inherit;
+  font-size: 18px;
+  height: 36px;
+  padding: 10px;
+  width: 100%;
+}
+
+::placeholder {
+  color: lightgrey;
+}
+
+
+/***************************************************
+                    Default
+Settings if no prop attributes are provided by user.
+***************************************************/
+.select-menu-container {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  color: black;
+  justify-content: flex-end;
+  position: relative;
+  min-height: 0px;
+  max-height: 216px;
+  width: 100%;
+  min-width: 10%;
+}
+
+
+/**********************
+        Floated
+**********************/
+.select-menu-container.left.floated {
+  margin-right: auto;
+}
+.select-menu-container.right.floated {
+  margin-left: auto;
+}
+
+.select-menu-container.centered {
+  margin: 0 auto;
+}
+
+/**********************
+          Size
+**********************/
+.select-menu-container.mini.size {
+  width: 10%;
+}
+
+.select-menu-container.small.size {
+  width: 25%;
+}
+
+.select-menu-container.medium.size {
+  width: 50%;
+}
+
+.select-menu-container.full.size {
+  width: 100%;
+}
+
+/**********************
+      Disabled
+**********************/
+.select-menu-container.disabled {
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+/**********************
+      Striped Menu
+**********************/
+.menu-option.striped:nth-child(even) {
+  background-color: lightgrey;
 }
