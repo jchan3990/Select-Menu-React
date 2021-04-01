@@ -150,5 +150,9 @@ Settings if no prop attributes are provided by user.
 }
 
 /**********************
-      Background
+      Disabled
 **********************/
+.select-menu-container.disabled {
+  pointer-events: none;
+  opacity: 0.45;
+}
