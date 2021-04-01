@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import 'regenerator-runtime/runtime';
 import './App.css';
 
-// import SelectMenu from 'single-select-react-jc';
-import SelectMenu from './SelectMenu.jsx';
+import SelectMenu from 'single-select-react-jc';
+// import SelectMenu from './SelectMenu.jsx';
 import { animeArray, animeObject, carsArray, hotelsObject } from '../data/sampleData.js';
 
 const App = () => {
@@ -37,7 +37,6 @@ const App = () => {
           onChange={onChange}
           centered
           size="small"
-          striped
         />
       }
     </div>

@@ -20,8 +20,6 @@ const SelectMenu = (props) => {
     useKeyOnly(striped, 'striped'),
   )
 
-  console.log(selectMenuClasses, optionsClasses)
-
   const [search, setSearch] = useState('');
   const [isVisible, setVisible] = useState(false);
   const [cursor, setCursor] = useState(-1);
