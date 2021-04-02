@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './SelectMenu.css';
 import clsx from 'clsx';
 
-import { useKeyOnly, useValueAndKey, ueyOrValueAndKey } from '../utils/classNameBuilder';
+import { useKeyOnly, useValueAndKey, ueyOrValueAndKey } from './utils/classNameBuilder';
 
 const SelectMenu = (props) => {
   const { data, onChange, centered, disabled, floated, hidden, size, striped} = props;
