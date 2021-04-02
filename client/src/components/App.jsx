@@ -8,6 +8,7 @@ import { animeArray, animeObject, carsArray, hotelsObject } from '../data/sample
 
 const App = () => {
   const [options, setOptions] = useState([]);
+
   useEffect(() => {
     fetch(`https://private-anon-6a5be50f2b-carsapi1.apiary-mock.com/manufacturers`)
       .then(response => {
@@ -35,6 +36,7 @@ const App = () => {
         <SelectMenu
           name="test"
           placeholder="Car Make"
+          value="carMake"
           data={options}
           onChange={onChange}
           centered

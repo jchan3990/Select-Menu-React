@@ -45,6 +45,12 @@ const SelectMenu = (props) => {
     setVisible(false);
   };
 
+  const handleChange = e => {
+    setSearch(e.target.value);
+    onChange(e.target.value);
+    setVisible(true);
+  }
+
   const handleKeyboardNav = e => {
     if (e.keyCode === 40) {
       if (!isVisible) setVisible(!isVisible);
@@ -136,11 +142,7 @@ const SelectMenu = (props) => {
         placeholder={placeholder}
         value={search}
         tabIndex="0"
-        onChange={e => {
-          setSearch(e.target.value);
-          onChange(search);
-          setVisible(true);
-        }}
+        onChange={handleChange}
         onClick={() => setVisible(!isVisible)}
         onKeyDown={e => handleKeyboardNav(e)}
       />
