@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { useKeyOnly, useValueAndKey, ueyOrValueAndKey } from './utils/classNameBuilder';
 
 const SelectMenu = (props) => {
-  const { data, onChange, centered, disabled, floated, hidden, size, striped} = props;
+  const { name, placeholder, data, onChange, centered, disabled, floated, hidden, size, striped} = props;
 
   const selectMenuClasses = clsx(
     'select-menu-container',
@@ -132,8 +132,8 @@ const SelectMenu = (props) => {
     <div className={selectMenuClasses} ref={wrapperRef}>
       <input
         type="text"
-        name="search"
-        placeholder="Select..."
+        name={name}
+        placeholder={placeholder}
         value={search}
         tabIndex="0"
         onChange={e => {

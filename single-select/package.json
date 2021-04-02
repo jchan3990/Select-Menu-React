@@ -1,6 +1,6 @@
 {
   "name": "single-select-react-jc",
-  "version": "1.1.7",
+  "version": "1.2.7",
   "description": "React single select component",
   "main": "./build/index.js",
   "scripts": {

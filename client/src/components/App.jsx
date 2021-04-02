@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import 'regenerator-runtime/runtime';
 import './App.css';
 
-import SelectMenu from 'single-select-react-jc';
-// import SelectMenu from './SelectMenu.jsx';
+// import SelectMenu from 'single-select-react-jc';
+import SelectMenu from './SelectMenu.jsx';
 import { animeArray, animeObject, carsArray, hotelsObject } from '../data/sampleData.js';
 
 const App = () => {
@@ -33,10 +33,12 @@ const App = () => {
     <div className="app">
       {options.length > 0 &&
         <SelectMenu
+          name="test"
+          placeholder="Car Make"
           data={options}
           onChange={onChange}
           centered
-          striped="lightpink"
+          striped="lightgrey"
           size="small"
         />
       }
