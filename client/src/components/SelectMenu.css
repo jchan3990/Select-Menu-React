@@ -142,8 +142,39 @@ Settings if no prop attributes are provided by user.
 }
 
 /**********************
+        Hidden
+**********************/
+.select-menu-container.hidden {
+  visibility: hidden;
+}
+
+/**********************
       Striped Menu
 **********************/
-.menu-option.striped:nth-child(even) {
+.menu-option.lightgrey.striped:nth-child(even) {
   background-color: lightgrey;
+}
+.menu-option.lightgrey.striped:hover {
+  background-color: lightblue;
+}
+
+.menu-option.lightcyan.striped:nth-child(even) {
+  background-color: lightcyan;
+}
+.menu-option.lightcyan.striped:hover {
+  background-color: lightblue;
+}
+
+.menu-option.lightgreen.striped:nth-child(even) {
+  background-color: lightgreen;
+}
+.menu-option.lightgreen.striped:hover {
+  background-color: lightblue;
+}
+
+.menu-option.lightpink.striped:nth-child(even) {
+  background-color: lightpink;
+}
+.menu-option.lightpink.striped:hover {
+  background-color: lightblue;
 }
