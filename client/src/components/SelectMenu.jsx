@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { useKeyOnly, useValueAndKey, ueyOrValueAndKey } from '../utils/classNameBuilder';
 
 const SelectMenu = (props) => {
-  const { name, placeholder, data, onChange, centered, disabled, floated, hidden, size, striped} = props;
+  const { data, onChange, centered, disabled, floated, hidden, named, placeholder, size, striped} = props;
 
   const selectMenuClasses = clsx(
     'select-menu-container',
