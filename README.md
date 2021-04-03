@@ -1,10 +1,24 @@
-# Custom Drop Down Select React Component
+# single-select-react-jc
+> Tiny (19kB) react single-select drop down component.
 
-## Description
-A drop down select React component that accepts data as a list of arrays or as objects.
-Eg. List of Arrays:
-```javascript
-const carsArray = [
+## Install
+```
+$ npm install --save single-select-react-jc
+```
+
+## Usage
+### Basic
+```js
+import SelectMenu from 'single-select-react-jc'
+
+<SelectMenu data={data} />
+```
+_If no data provided, component will be visible but disabled_
+
+### Data Format
+Can be either a list of arrays or list of objects.
+```js
+export const carsArray = [
   ['BMW','./images/bmw.jpeg'],
   ['Honda','./images/honda.png'],
   ['Toyota','./images/toyota.jpeg'],
@@ -14,37 +28,50 @@ const carsArray = [
   ['Ferrari','./images/ferrari.jpeg'],
   ['Lamborghini','./images/lambo.jpeg']
 ];
-```
-Eg. List of Objects:
-```javascript
-const hotelsObject = [
-  {'value': 'Motel 6', 'logo': './images/m6.png'},
-  {'value': 'Best Western', 'logo': './images/bw.png'},
-  {'value': 'Hyatt', 'logo': './images/hyatt.png'},
-  {'value': 'Marriot', 'logo': './images/marriot.png'},
-  {'value': 'Sheraton', 'logo': './images/sheraton.png'},
-  {'value': 'Hilton', 'logo': './images/hilton.png'},
-]
-```
 
-## Usage
-* Pass data as props (see above formats) to component
-```javascript
-<SelectMenu data={data}/>
+export const animeObject = [
+  {'value': 'Jujutsu Kaisen', 'logo': './images/jjk.jpeg'},
+  {'value': 'One Piece', 'logo': './images/onepiece.jpeg'},
+  {'value': 'Naruto', 'logo': './images/naruto.jpeg'},
+  {'value': 'Attack on Titan', 'logo': './images/AoT.jpeg'},
+  {'value': 'Food Wars', 'logo': './images/fw.jpeg'},
+  {'value': 'Pokemon', 'logo': './images/pikachu.jpeg'},
+  {'value': 'My Hero Acadamia', 'logo': './images/mha.jpeg'}
+];
 ```
-* Pressing tab once focus on component: `tabIndex=0`
-* Using the drop down
-  * Click to see all options
-  * Type to narrow down matching options
-    * 0 Matches returns 'No Options' message
+### Demo
+[![Edit single-select-react-jc](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/angry-mcclintock-d2oi5?file=/src/App.js)
 
-## Install Dependencies
-npm install
+
+## API
+### Props
+Name | Default | Type | Description
+-----|---------|------|------------
+centered | false | {bool} | Center component in parent container
+disabled | false | {bool} | Show component as disabled
+floated | | {enum} | Position component in parent container<br><b>Enums:</b><br>```left``` ```right```
+hidden | | {bool} | Component visibility hidden
+name | | {string} |  Name of input element
+onChange | | {func} | Set parent variable on change
+onClick | | {func} | Set parent variable on click
+placeholder | | {string} | Placeholder text
+size | | {enum} | Component width within parent container<br><b>Enums:</b><br>```mini``` ```small``` ```medium``` ```full```
+striped | | {enum} | Alternate striping of menu options<br><b>Enums:</b><br>```lightgrey``` ```lightcyan``` ```lightgreen``` ```lightpink```
+
+## Accessibility
+* Tab focuses to component
+* Keyboard Up / Down arrow navigation
+* Enter selects first matching option
+* Esc closes menu
 
 ## Development
-### Run
-* npm run react-dev to start webpack watchdog for React changes
-* npm start to start server
-  * Open http://localhost:3003/ to view in browser
+```
+npm install
+npm run react-dev
+npm start (http://localhost:3003)
+```
+
+## License
+single-select-react-jc is released under the ISC license.
 
 

@@ -39,6 +39,9 @@ export const animeObject = [
   {'value': 'My Hero Acadamia', 'logo': './images/mha.jpeg'}
 ];
 ```
+### Demo
+[![Edit single-select-react-jc](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/angry-mcclintock-d2oi5?file=/src/App.js)
+
 
 ## API
 ### Props
@@ -46,13 +49,20 @@ Name | Default | Type | Description
 -----|---------|------|------------
 centered | false | {bool} | Center component in parent container
 disabled | false | {bool} | Show component as disabled
-floated | | {enum} | Position component in parent container<br><b>Enums:</b><br>left right
+floated | | {enum} | Position component in parent container<br><b>Enums:</b><br>```left``` ```right```
 hidden | | {bool} | Component visibility hidden
 name | | {string} |  Name of input element
-onChange | | {func} | Called on change
+onChange | | {func} | Set parent variable on change
+onClick | | {func} | Set parent variable on click
 placeholder | | {string} | Placeholder text
-size | | {enum} | Component width within parent container<br><b>Enums:</b><br>mini small medium full
-striped | | {enum} | Alternate striping of menu options<br><b>Enums:</b><br>lightgrey lightcyan lightgreen lightpink
+size | | {enum} | Component width within parent container<br><b>Enums:</b><br>```mini``` ```small``` ```medium``` ```full```
+striped | | {enum} | Alternate striping of menu options<br><b>Enums:</b><br>```lightgrey``` ```lightcyan``` ```lightgreen``` ```lightpink```
+
+## Accessibility
+* Tab focuses to component
+* Keyboard Up / Down arrow navigation
+* Enter selects first matching option
+* Esc closes menu
 
 ## Development
 ```
