@@ -6,6 +6,7 @@ Styles that don't need to change / Constrained by parent container.
   align-items: center;
   display: flex;
   justify-content: space-around;
+  line-height: 36px;
   margin: 0px 5px;
   position: absolute;
   width: 55px;
