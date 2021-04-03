@@ -80,9 +80,11 @@ const SelectMenu = (props) => {
     if (e.keyCode === 13) {
       if (Array.isArray(currData[0])) {
         setSearch(currData.filter(d => d[0].toLowerCase().includes(search.toLowerCase()))[0][0]);
+        onClick(currData.filter(d => d[0].toLowerCase().includes(search.toLowerCase()))[0][0]);
         setVisible(false);
       } else {
         setSearch(currData.filter(d =>d.value.toLowerCase().includes(search.toLowerCase()))[0].value);
+        onClick(currData.filter(d =>d.value.toLowerCase().includes(search.toLowerCase()))[0].value);
         setVisible(false);
       }
     }
