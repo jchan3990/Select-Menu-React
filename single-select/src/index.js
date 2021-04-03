@@ -76,6 +76,14 @@ const SelectMenu = (props) => {
       else setSearch(currData[cursor].value)
     }
 
+    if (e.keyCode === 13) {
+      if (Array.isArray(currData[0])) {
+        setSearch(currData.filter(d => d[0].toLowerCase().includes(search.toLowerCase()))[0][0])
+      } else {
+        setSearch(currData.filter(d =>d.value.toLowerCase().includes(search.toLowerCase()))[0].value)
+      }
+    }
+
     if (e.keyCode === 27) setVisible(false);
   }
 

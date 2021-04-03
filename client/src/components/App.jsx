@@ -37,7 +37,7 @@ const App = () => {
           name="test"
           placeholder="Car Make"
           value="carMake"
-          data={options}
+          data={animeObject}
           onChange={onChange}
           centered
           striped="lightgrey"
