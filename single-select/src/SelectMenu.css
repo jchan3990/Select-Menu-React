@@ -88,6 +88,7 @@ img {
 Settings if no prop attributes are provided by user.
 ***************************************************/
 .select-menu-container {
+  align-items: center;
   background-color: white;
   border-radius: 5px;
   display: flex;
