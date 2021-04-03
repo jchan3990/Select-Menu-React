@@ -6,8 +6,9 @@ import { useKeyOnly, useValueAndKey, ueyOrValueAndKey } from '../utils/className
 
 const SelectMenu = (props) => {
   const { data, onChange, centered, disabled, floated, hidden, named, placeholder, size, striped} = props;
+  const [currData, setCurrData] = useState(data !== undefined ? data : [['No Data', 'NA']])
 
-  const selectMenuClasses = clsx(
+  let selectMenuClasses = clsx(
     'select-menu-container',
     useKeyOnly(centered, 'centered'),
     useValueAndKey(floated, 'floated'),
@@ -20,6 +21,8 @@ const SelectMenu = (props) => {
     'menu-option',
     useValueAndKey(striped, 'striped'),
   )
+
+  if (data === undefined) selectMenuClasses = 'select-menu-container small size disabled';
 
   const [search, setSearch] = useState('');
   const [isVisible, setVisible] = useState(false);
@@ -54,23 +57,23 @@ const SelectMenu = (props) => {
   const handleKeyboardNav = e => {
     if (e.keyCode === 40) {
       if (!isVisible) setVisible(!isVisible);
-      if (cursor < data.length - 1) {
+      if (cursor < currData.length - 1) {
         setCursor(cursor + 1);
         if (cursor !== -1) {
-          if (Array.isArray(data[cursor])) setSearch(data[cursor][0]);
-          else setSearch(data[cursor].value)
+          if (Array.isArray(currData[cursor])) setSearch(currData[cursor][0]);
+          else setSearch(currData[cursor].value)
         }
       } else {
         setCursor(cursor);
-        if (Array.isArray(data[cursor])) setSearch(data[cursor][0]);
-        else setSearch(data[cursor].value)
+        if (Array.isArray(currData[cursor])) setSearch(currData[cursor][0]);
+        else setSearch(currData[cursor].value)
       }
     }
 
     if (e.keyCode === 38) {
       if (cursor > 0) setCursor(cursor - 1);
-      if (Array.isArray(data[cursor])) setSearch(data[cursor][0]);
-      else setSearch(data[cursor].value)
+      if (Array.isArray(currData[cursor])) setSearch(currData[cursor][0]);
+      else setSearch(currData[cursor].value)
     }
 
     if (e.keyCode === 27) setVisible(false);
@@ -95,10 +98,10 @@ const SelectMenu = (props) => {
   );
 
   let optionMenu;
-  if (Array.isArray(data[0]) && isVisible && data.filter(option => option[0].toLowerCase().includes(search.toLowerCase())).length > 0) {
+  if (Array.isArray(currData[0]) && isVisible && currData.filter(option => option[0].toLowerCase().includes(search.toLowerCase())).length > 0) {
     optionMenu = (
       <div className="dropdown-menu-container">
-        {data.filter((option, i) => option[0].toLowerCase().includes(search.toLowerCase()))
+        {currData.filter((option, i) => option[0].toLowerCase().includes(search.toLowerCase()))
           .map((match, i) => (
             <div className={optionsClasses} key={i} onClick={() => clickOption(match[0])}>
               <span style={{marginLeft: "10px", fontFamily: "Arial"}} key={i}>{match[0]}</span>
@@ -108,10 +111,10 @@ const SelectMenu = (props) => {
         }
       </div>
     )
-  } else if (!Array.isArray(data[0]) && isVisible && data.filter(option => option.value.toLowerCase().includes(search.toLowerCase())).length > 0){
+  } else if (!Array.isArray(currData[0]) && isVisible && currData.filter(option => option.value.toLowerCase().includes(search.toLowerCase())).length > 0){
     optionMenu = (
       <div className="dropdown-menu-container">
-        {data.filter((option, i) => option.value.toLowerCase().includes(search.toLowerCase()))
+        {currData.filter((option, i) => option.value.toLowerCase().includes(search.toLowerCase()))
           .map((match, i) => (
             <div className={optionsClasses} key={i} onClick={() => clickOption(match.value)}>
               <span style={{marginLeft: "10px", fontFamily: "Arial"}} key={i}>{match.value}</span>

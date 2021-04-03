@@ -13,7 +13,7 @@ import SelectMenu from 'single-select-react-jc'
 
 <SelectMenu data={data} />
 ```
-_Data in the appropriate supported formats is required_
+_If no data provided, component will be visible but disabled_
 
 ### Data Format
 Can be either a list of arrays or list of objects.
