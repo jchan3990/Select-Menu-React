@@ -45,6 +45,6 @@ npm install
 ### Run
 * npm run react-dev to start webpack watchdog for React changes
 * npm start to start server
-  * Open http://localhost:3000/ to view in browser
+  * Open http://localhost:3003/ to view in browser
 
 
