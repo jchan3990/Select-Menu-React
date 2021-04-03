@@ -8,6 +8,7 @@ import { animeArray, animeObject, carsArray, hotelsObject } from '../data/sample
 
 const App = () => {
   const [options, setOptions] = useState([]);
+  const [clicked, setClicked] = useState('');
 
   useEffect(() => {
     fetch(`https://private-anon-6a5be50f2b-carsapi1.apiary-mock.com/manufacturers`)
@@ -30,6 +31,10 @@ const App = () => {
     console.log(change);
   }
 
+  const onClick = clicked => {
+    console.log(clicked);
+  }
+
   return (
     <div className="app">
       {options.length > 0 &&
@@ -39,6 +44,7 @@ const App = () => {
           value="carMake"
           data={options}
           onChange={onChange}
+          onClick={onClick}
           centered
           striped="lightgrey"
           size="small"

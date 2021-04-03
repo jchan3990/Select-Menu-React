@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { useKeyOnly, useValueAndKey, useKeyOrValueAndKey } from '../utils/classNameBuilder';
 
 const SelectMenu = (props) => {
-  const { data, onChange, centered, disabled, floated, hidden, name, placeholder, size, striped} = props;
+  const { data, onChange, onClick, centered, disabled, floated, hidden, name, placeholder, size, striped} = props;
   const [currData, setCurrData] = useState(data !== undefined ? data : [['No Data', 'NA']])
 
   let selectMenuClasses = clsx(
@@ -45,6 +45,7 @@ const SelectMenu = (props) => {
 
   const clickOption = selected => {
     setSearch(selected);
+    onClick(selected);
     setVisible(false);
   };
 
