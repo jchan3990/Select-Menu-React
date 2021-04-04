@@ -51,9 +51,9 @@ const SelectMenu = (props) => {
 
   const handleChange = e => {
     setSearch(e.target.value);
-    if (Array.isArray(currData[0])) {
+    if (Array.isArray(data[0])) {
       setCurrData(data.filter(d => d[0].toLowerCase().includes(e.target.value.toLowerCase())));
-    } else {
+    } else if (currData > 0) {
       setCurrData(data.filter(d => d.value.toLowerCase().includes(e.target.value.toLowerCase())));
     }
     setCursor(-1);
