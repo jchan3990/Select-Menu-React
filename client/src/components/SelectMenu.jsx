@@ -52,9 +52,9 @@ const SelectMenu = (props) => {
   const handleChange = e => {
     setSearch(e.target.value);
     if (Array.isArray(currData[0])) {
-      setCurrData(currData.filter(d => d[0].toLowerCase().includes(e.target.value.toLowerCase())));
+      setCurrData(data.filter(d => d[0].toLowerCase().includes(e.target.value.toLowerCase())));
     } else {
-      setCurrData(currData.filter(d => d.value.toLowerCase().includes(e.target.value.toLowerCase())));
+      setCurrData(data.filter(d => d.value.toLowerCase().includes(e.target.value.toLowerCase())));
     }
     onChange(e.target.value);
     setVisible(true);
@@ -62,7 +62,6 @@ const SelectMenu = (props) => {
 
   const handleKeyboardNav = e => {
     if (e.keyCode === 40) {
-      console.log(currData);
       if (!isVisible) setVisible(!isVisible);
       if (cursor < currData.length - 1) {
         setCursor(cursor + 1);
