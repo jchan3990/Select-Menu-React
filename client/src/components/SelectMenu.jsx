@@ -56,6 +56,7 @@ const SelectMenu = (props) => {
     } else {
       setCurrData(data.filter(d => d.value.toLowerCase().includes(e.target.value.toLowerCase())));
     }
+    setCursor(-1);
     onChange(e.target.value);
     setVisible(true);
   }
