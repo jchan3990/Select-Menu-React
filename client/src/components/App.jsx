@@ -4,7 +4,7 @@ import './App.css';
 
 // import SelectMenu from 'single-select-react-jc';
 import SelectMenu from './SelectMenu.jsx';
-import { animeArray, animeObject, carsArray, hotelsObject } from '../data/sampleData.js';
+import { animeArray, animeObject, carsArray, hotelsObject, countriesObj } from '../data/sampleData.js';
 
 const App = () => {
   const [options, setOptions] = useState([]);
@@ -40,14 +40,14 @@ const App = () => {
       {options.length > 0 &&
         <SelectMenu
           name="test"
-          placeholder="Car Make"
+          placeholder="Countries..."
           value="carMake"
-          data={options}
+          data={countriesObj}
           onChange={onChange}
           onClick={onClick}
-          centered
           striped="lightgrey"
           size="small"
+          centered
         />
       }
     </div>

@@ -36,3 +36,88 @@ export const hotelsObject = [
   {'value': 'Sheraton', 'logo': './images/sheraton.png'},
   {'value': 'Hilton', 'logo': './images/hilton.png'},
 ]
+
+export const countriesObj = [
+  {
+    'value': 'USA',
+    'logo': "test",
+    'subOptions': [
+      {
+        'value': 'San Jose',
+        'logo': 'test',
+        'subOptions': [],
+      },
+      {
+        'value': 'San Francisco',
+        'logo': 'test',
+        'subOptions': [],
+      },
+      {
+        'value': 'Los Angeles',
+        'logo': 'test',
+        'subOptions': [],
+      },
+      {
+        'value': 'San Diego',
+        'logo': 'test',
+        'subOptions': [],
+      },
+      {
+        'value': 'Tehachapi',
+        'logo': 'test',
+        'subOptions': [],
+      },
+    ]
+  },
+  {
+    'value': 'Japan',
+    'logo': 'test',
+    'subOptions': [
+      {
+        'value': 'Tokyo',
+        'logo': 'test',
+        'subOptions': [],
+      },
+      {
+        'value': 'Kyoto',
+        'logo': 'test',
+        'subOptions': [],
+      },
+      {
+        'value': 'Osaka',
+        'logo': 'test',
+        'subOptions': [],
+      },
+    ]
+  },
+  {
+    'value': 'Germany',
+    'logo': 'test',
+    'subOptions': [
+      {
+        'value': 'Munich',
+        'logo': 'test',
+        'subOptions': [],
+      },
+      {
+        'value': 'Berlin',
+        'logo': 'test',
+        'subOptions': [],
+      },
+      {
+        'value': 'Frankfurt',
+        'logo': 'test',
+        'subOptions': [],
+      },
+    ]
+  },
+  {
+    'value': 'Wakanda',
+    'logo': 'test',
+    'subOptions': [],
+  },
+]
+
+export const countriesArr = [
+
+]
