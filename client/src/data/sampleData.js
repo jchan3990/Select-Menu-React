@@ -116,7 +116,7 @@ export const countriesObj = [
     'logo': 'https://i.redd.it/yvzgtslorrg01.png',
     'subOptions': [],
   },
-]
+];
 
 export const countriesArr = [
   [
@@ -197,4 +197,4 @@ export const countriesArr = [
     'https://i.redd.it/yvzgtslorrg01.png',
     []
   ]
-]
+];
