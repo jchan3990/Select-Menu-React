@@ -119,5 +119,82 @@ export const countriesObj = [
 ]
 
 export const countriesArr = [
-
+  [
+    'USA',
+    'img',
+    [
+      [
+        'San Jose',
+        'img',
+        []
+      ],
+      [
+        'San Francisco',
+        'img',
+        []
+      ],
+      [
+        'Los Angeles',
+        'img',
+        []
+      ],
+      [
+        'San Diego',
+        'img',
+        []
+      ],
+      [
+        'Tehachapi',
+        'img',
+        []
+      ]
+    ]
+  ],
+  [
+    'Japan',
+    'img',
+    [
+      [
+        'Tokyo',
+        'img',
+        []
+      ],
+      [
+        'Kyoto',
+        'img',
+        []
+      ],
+      [
+        'Osaka',
+        'img',
+        []
+      ]
+    ]
+  ],
+  [
+    'Germany',
+    'img',
+    [
+      [
+        'Munich',
+        'img',
+        []
+      ],
+      [
+        'Berlin',
+        'img',
+        []
+      ],
+      [
+        'Frankfurt',
+        'img',
+        []
+      ],
+    ]
+  ],
+  [
+    'Wakanda',
+    'img',
+    []
+  ]
 ]
