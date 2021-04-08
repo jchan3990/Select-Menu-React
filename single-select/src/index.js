@@ -3,6 +3,8 @@ import './SelectMenu.css';
 import clsx from 'clsx';
 
 import { useKeyOnly, useValueAndKey, useKeyOrValueAndKey } from './utils/classNameBuilder';
+import OptionsListObj from './OptionsListObj.js';
+import OptionsListArr from './OptionsListArr.js';
 
 const SelectMenu = (props) => {
   const { data, onChange, onClick, centered, disabled, floated, hidden, name, placeholder, size, striped} = props;
@@ -53,7 +55,7 @@ const SelectMenu = (props) => {
     setSearch(e.target.value);
     if (Array.isArray(data[0])) {
       setCurrData(data.filter(d => d[0].toLowerCase().includes(e.target.value.toLowerCase())));
-    } else if (currData > 0) {
+    } else {
       setCurrData(data.filter(d => d.value.toLowerCase().includes(e.target.value.toLowerCase())));
     }
     setCursor(-1);
@@ -117,41 +119,20 @@ const SelectMenu = (props) => {
   );
 
   let optionMenu;
-  if (Array.isArray(currData[0]) && isVisible && currData.filter(option => option[0].toLowerCase().includes(search.toLowerCase())).length > 0) {
+  if (Array.isArray(currData[0]) && isVisible) {
     optionMenu = (
       <div className="dropdown-menu-container">
-        {currData.filter((option, i) => option[0].toLowerCase().includes(search.toLowerCase()))
-          .map((match, i) => (
-            <div className={optionsClasses} key={i} onClick={() => clickOption(match[0])}>
-              <span style={{marginLeft: "10px", fontFamily: "Arial"}} key={i}>{match[0]}</span>
-              <img style={{marginRight: "10px"}} src={match[1]} alt={`${match[0]}`} />
-            </div>
-          ))
-        }
+        <OptionsListArr options={currData} level={1} onClick={clickOption} onChange={handleChange} />
       </div>
     )
-  } else if (!Array.isArray(currData[0]) && isVisible && currData.filter(option => option.value.toLowerCase().includes(search.toLowerCase())).length > 0){
+  } else if (!Array.isArray(currData[0]) && isVisible) {
     optionMenu = (
       <div className="dropdown-menu-container">
-        {currData.filter((option, i) => option.value.toLowerCase().includes(search.toLowerCase()))
-          .map((match, i) => (
-            <div className={optionsClasses} key={i} onClick={() => clickOption(match.value)}>
-              <span style={{marginLeft: "10px", fontFamily: "Arial"}} key={i}>{match.value}</span>
-              <img style={{marginRight: "10px"}} src={match.logo} alt={`${match.value}`} />
-            </div>
-          ))
-        }
-      </div>
-    )
-  } else if (isVisible) {
-    optionMenu = (
-      <div className="dropdown-menu-container">
-        <div className={optionsClasses}>
-          <h1 style={{color: "lightgrey", margin: "0 auto"}}>No Matches</h1>
-        </div>
+        <OptionsListObj options={currData} combo={[]} level={1} onClick={clickOption} onChange={handleChange} className={optionsClasses} />
       </div>
     )
   }
+
 
   let arrow;
   isVisible ? arrow = upArrow : arrow = downArrow;
