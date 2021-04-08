@@ -1,0 +1,56 @@
+.options-container {
+  display: flex;
+  flex-direction: column;
+  height: 36px;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 36px;
+}
+
+.menu-option {
+  display: flex;
+  height: 36px;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 36px;
+}
+
+.menu-option:hover {
+  cursor: pointer;
+  background: lightskyblue;
+}
+
+.menu-option:focus {
+  background: lightskyblue;
+}
+
+/**********************
+      Striped Menu
+**********************/
+.menu-option.lightgrey.striped:nth-child(even) {
+  background-color: lightgrey;
+}
+.menu-option.lightgrey.striped:hover {
+  background-color: lightblue;
+}
+
+.menu-option.lightcyan.striped:nth-child(even) {
+  background-color: lightcyan;
+}
+.menu-option.lightcyan.striped:hover {
+  background-color: lightblue;
+}
+
+.menu-option.lightgreen.striped:nth-child(even) {
+  background-color: lightgreen;
+}
+.menu-option.lightgreen.striped:hover {
+  background-color: lightblue;
+}
+
+.menu-option.lightpink.striped:nth-child(even) {
+  background-color: lightpink;
+}
+.menu-option.lightpink.striped:hover {
+  background-color: lightblue;
+}

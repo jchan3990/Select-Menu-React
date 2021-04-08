@@ -3,7 +3,8 @@ import './SelectMenu.css';
 import clsx from 'clsx';
 
 import { useKeyOnly, useValueAndKey, useKeyOrValueAndKey } from '../utils/classNameBuilder';
-import OptionsList from './OptionsList.jsx';
+import OptionsListObj from './OptionsListObj.jsx';
+import OptionsListArr from './OptionsListArr.jsx';
 
 const SelectMenu = (props) => {
   const { data, onChange, onClick, centered, disabled, floated, hidden, name, placeholder, size, striped} = props;
@@ -54,7 +55,7 @@ const SelectMenu = (props) => {
     setSearch(e.target.value);
     if (Array.isArray(data[0])) {
       setCurrData(data.filter(d => d[0].toLowerCase().includes(e.target.value.toLowerCase())));
-    } else if (currData > 0) {
+    } else {
       setCurrData(data.filter(d => d.value.toLowerCase().includes(e.target.value.toLowerCase())));
     }
     setCursor(-1);
@@ -118,13 +119,20 @@ const SelectMenu = (props) => {
   );
 
   let optionMenu;
-  if (isVisible) {
+  if (Array.isArray(currData[0]) && isVisible) {
     optionMenu = (
       <div className="dropdown-menu-container">
-        <OptionsList options={data} />
+        <OptionsListArr options={currData} level={1} onClick={clickOption} onChange={handleChange} />
+      </div>
+    )
+  } else if (!Array.isArray(currData[0]) && isVisible) {
+    optionMenu = (
+      <div className="dropdown-menu-container">
+        <OptionsListObj options={currData} combo={[]} level={1} onClick={clickOption} onChange={handleChange} className={optionsClasses} />
       </div>
     )
   }
+
 
   let arrow;
   isVisible ? arrow = upArrow : arrow = downArrow;

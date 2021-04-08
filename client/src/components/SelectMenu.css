@@ -29,6 +29,7 @@ Styles that don't need to change / Constrained by parent container.
   flex-direction: column;
   overflow: scroll;
   position: absolute;
+  height: fit-content;
   max-height: 216px;
   left: 0px;
   right: 0px;

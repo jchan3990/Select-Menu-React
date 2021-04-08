@@ -4,7 +4,7 @@ import './App.css';
 
 // import SelectMenu from 'single-select-react-jc';
 import SelectMenu from './SelectMenu.jsx';
-import { animeArray, animeObject, carsArray, hotelsObject, countriesObj } from '../data/sampleData.js';
+import { animeArray, animeObject, carsArray, hotelsObject, countriesObj, countriesArr } from '../data/sampleData.js';
 
 const App = () => {
   const [options, setOptions] = useState([]);
@@ -28,11 +28,11 @@ const App = () => {
   }, [])
 
   const onChange = (change) => {
-    console.log(change);
+    // console.log(change);
   }
 
   const onClick = clicked => {
-    console.log(clicked);
+    // console.log(clicked);
   }
 
   return (

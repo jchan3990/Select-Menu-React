@@ -40,80 +40,80 @@ export const hotelsObject = [
 export const countriesObj = [
   {
     'value': 'USA',
-    'logo': "test",
+    'logo': "https://www.countries-ofthe-world.com/flags-normal/flag-of-United-States-of-America.png",
     'subOptions': [
       {
         'value': 'San Jose',
-        'logo': 'test',
+        'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Flag_of_San_Jos%C3%A9%2C_California.svg/255px-Flag_of_San_Jos%C3%A9%2C_California.svg.png',
         'subOptions': [],
       },
       {
         'value': 'San Francisco',
-        'logo': 'test',
+        'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_San_Francisco.svg/255px-Flag_of_San_Francisco.svg.png',
         'subOptions': [],
       },
       {
         'value': 'Los Angeles',
-        'logo': 'test',
+        'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Los_Angeles%2C_California.svg/1200px-Flag_of_Los_Angeles%2C_California.svg.png',
         'subOptions': [],
       },
       {
         'value': 'San Diego',
-        'logo': 'test',
+        'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_San_Diego%2C_California.svg/1200px-Flag_of_San_Diego%2C_California.svg.png',
         'subOptions': [],
       },
       {
         'value': 'Tehachapi',
-        'logo': 'test',
+        'logo': 'https://media-cdn.tripadvisor.com/media/photo-s/02/66/e1/91/filename-railroad-watertower.jpg',
         'subOptions': [],
       },
     ]
   },
   {
     'value': 'Japan',
-    'logo': 'test',
+    'logo': 'https://i.pinimg.com/originals/7a/3d/90/7a3d9097761a637b3be29cd0dc6f7971.jpg',
     'subOptions': [
       {
         'value': 'Tokyo',
-        'logo': 'test',
+        'logo': 'https://www.crwflags.com/fotw/images/j/jp-13.gif',
         'subOptions': [],
       },
       {
         'value': 'Kyoto',
-        'logo': 'test',
+        'logo': 'https://www.crwflags.com/fotw/images/j/jp-26.gif',
         'subOptions': [],
       },
       {
         'value': 'Osaka',
-        'logo': 'test',
+        'logo': 'https://www.crwflags.com/fotw/images/j/jp-27.gif',
         'subOptions': [],
       },
     ]
   },
   {
     'value': 'Germany',
-    'logo': 'test',
+    'logo': 'https://www.countries-ofthe-world.com/flags-normal/flag-of-Germany.png',
     'subOptions': [
       {
         'value': 'Munich',
-        'logo': 'test',
+        'logo': 'https://www.crwflags.com/fotw/images/d/de-ba-m1.gif',
         'subOptions': [],
       },
       {
         'value': 'Berlin',
-        'logo': 'test',
+        'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Berlin.svg/1200px-Flag_of_Berlin.svg.png',
         'subOptions': [],
       },
       {
         'value': 'Frankfurt',
-        'logo': 'test',
+        'logo': 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Flag_of_the_Free_City_of_Frankfurt.svg',
         'subOptions': [],
       },
     ]
   },
   {
     'value': 'Wakanda',
-    'logo': 'test',
+    'logo': 'https://i.redd.it/yvzgtslorrg01.png',
     'subOptions': [],
   },
 ]
@@ -121,80 +121,80 @@ export const countriesObj = [
 export const countriesArr = [
   [
     'USA',
-    'img',
+    'https://www.countries-ofthe-world.com/flags-normal/flag-of-United-States-of-America.png',
     [
       [
         'San Jose',
-        'img',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Flag_of_San_Jos%C3%A9%2C_California.svg/255px-Flag_of_San_Jos%C3%A9%2C_California.svg.png',
         []
       ],
       [
         'San Francisco',
-        'img',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_San_Francisco.svg/255px-Flag_of_San_Francisco.svg.png',
         []
       ],
       [
         'Los Angeles',
-        'img',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Los_Angeles%2C_California.svg/1200px-Flag_of_Los_Angeles%2C_California.svg.png',
         []
       ],
       [
         'San Diego',
-        'img',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_San_Diego%2C_California.svg/1200px-Flag_of_San_Diego%2C_California.svg.png',
         []
       ],
       [
         'Tehachapi',
-        'img',
+        'https://media-cdn.tripadvisor.com/media/photo-s/02/66/e1/91/filename-railroad-watertower.jpg',
         []
       ]
     ]
   ],
   [
     'Japan',
-    'img',
+    'https://i.pinimg.com/originals/7a/3d/90/7a3d9097761a637b3be29cd0dc6f7971.jpg',
     [
       [
         'Tokyo',
-        'img',
+        'https://www.crwflags.com/fotw/images/j/jp-13.gif',
         []
       ],
       [
         'Kyoto',
-        'img',
+        'https://www.crwflags.com/fotw/images/j/jp-26.gif',
         []
       ],
       [
         'Osaka',
-        'img',
+        'https://www.crwflags.com/fotw/images/j/jp-27.gif',
         []
       ]
     ]
   ],
   [
     'Germany',
-    'img',
+    'https://www.countries-ofthe-world.com/flags-normal/flag-of-Germany.png',
     [
       [
         'Munich',
-        'img',
+        'https://www.crwflags.com/fotw/images/d/de-ba-m1.gif',
         []
       ],
       [
         'Berlin',
-        'img',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Berlin.svg/1200px-Flag_of_Berlin.svg.png',
         []
       ],
       [
         'Frankfurt',
-        'img',
+        'https://upload.wikimedia.org/wikipedia/commons/2/2e/Flag_of_the_Free_City_of_Frankfurt.svg',
         []
       ],
     ]
   ],
   [
     'Wakanda',
-    'img',
+    'https://i.redd.it/yvzgtslorrg01.png',
     []
   ]
 ]
