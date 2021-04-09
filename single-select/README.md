@@ -121,8 +121,10 @@ export const countriesObj = [
     'subOptions': [],
   },
 ];
+```
 __SubOption name can be specified by user__
 
+``` js
 export const countriesArr = [
   [
     'USA',
