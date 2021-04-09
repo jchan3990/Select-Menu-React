@@ -12,7 +12,7 @@ const OptionsListArr = ({ options, level, onClick, className }) => {
           </div>
           <div style={{position: 'relative', left: '25px'}}>
             {option[2] !== undefined && option[2].length > 0 ? (
-              <OptionsListArr options={option[2]} level={level + 1} onClick={onClick}/>
+              <OptionsListArr options={option[2]} level={level + 1} onClick={onClick} sub={sub} />
             ) : (
               <></>
             )

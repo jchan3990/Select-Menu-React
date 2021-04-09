@@ -2,7 +2,6 @@ import React from 'react';
 import './OptionsList.css';
 
 const OptionsListObj = ({ options, level, onClick, className, sub }) => {
-
   return (
     <>
       {options.map((option, idx) => (
@@ -13,7 +12,7 @@ const OptionsListObj = ({ options, level, onClick, className, sub }) => {
           </div>
           <div style={{position: 'relative', left: '25px'}}>
             {option[sub] !== undefined && option[sub].length > 0 ? (
-              <OptionsListObj options={option[sub]} level={level + 1} onClick={onClick} />
+              <OptionsListObj options={option[sub]} level={level + 1} onClick={onClick} sub={sub} />
             ) : (
               <></>
             )
