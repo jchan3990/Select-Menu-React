@@ -1,9 +1,10 @@
 import React from 'react';
-// import './OptionsList.css';
+import './OptionsList.css';
 
-const OptionsListObj = ({ options, level, onClick, className }) => {
+const OptionsListObj = ({ options, level, onClick, className, sub }) => {
+
   return (
-    <div className='options-container'>
+    <>
       {options.map((option, idx) => (
         <div key={idx}>
           <div className='menu-option'>
@@ -11,8 +12,8 @@ const OptionsListObj = ({ options, level, onClick, className }) => {
             <img style={{marginRight: "10px"}} src={option.logo} alt={`${option.value}`} />
           </div>
           <div style={{position: 'relative', left: '25px'}}>
-            {option.subOptions !== undefined && option.subOptions.length > 0 ? (
-              <OptionsListObj options={option.subOptions} level={level + 1} onClick={onClick}/>
+            {option[sub] !== undefined && option[sub].length > 0 ? (
+              <OptionsListObj options={option[sub]} level={level + 1} onClick={onClick} />
             ) : (
               <></>
             )
@@ -20,7 +21,7 @@ const OptionsListObj = ({ options, level, onClick, className }) => {
           </div>
         </div>
       ))}
-    </div>
+    </>
   )
 }
 

@@ -48,6 +48,7 @@ const App = () => {
           striped="lightgrey"
           size="small"
           centered
+          sub="city"
         />
       }
     </div>

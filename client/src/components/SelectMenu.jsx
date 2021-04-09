@@ -7,7 +7,7 @@ import OptionsListObj from './OptionsListObj.jsx';
 import OptionsListArr from './OptionsListArr.jsx';
 
 const SelectMenu = (props) => {
-  const { data, onChange, onClick, centered, disabled, floated, hidden, name, placeholder, size, striped} = props;
+  const { data, onChange, onClick, centered, disabled, floated, hidden, name, placeholder, size, striped, sub } = props;
   const [currData, setCurrData] = useState(data !== undefined ? data : [['No Data', 'NA']])
 
   let selectMenuClasses = clsx(
@@ -122,13 +122,13 @@ const SelectMenu = (props) => {
   if (Array.isArray(currData[0]) && isVisible) {
     optionMenu = (
       <div className="dropdown-menu-container">
-        <OptionsListArr options={currData} level={1} onClick={clickOption} onChange={handleChange} />
+        <OptionsListArr options={currData} level={1} onClick={clickOption} className={optionsClasses} />
       </div>
     )
   } else if (!Array.isArray(currData[0]) && isVisible) {
     optionMenu = (
       <div className="dropdown-menu-container">
-        <OptionsListObj options={currData} combo={[]} level={1} onClick={clickOption} onChange={handleChange} className={optionsClasses} />
+        <OptionsListObj options={currData} combo={[]} level={1} onClick={clickOption} className={optionsClasses} sub={sub}/>
       </div>
     )
   }

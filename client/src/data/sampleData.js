@@ -41,73 +41,73 @@ export const countriesObj = [
   {
     'value': 'USA',
     'logo': "https://www.countries-ofthe-world.com/flags-normal/flag-of-United-States-of-America.png",
-    'subOptions': [
+    'city': [
       {
         'value': 'San Jose',
         'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Flag_of_San_Jos%C3%A9%2C_California.svg/255px-Flag_of_San_Jos%C3%A9%2C_California.svg.png',
-        'subOptions': [],
+        'city': [],
       },
       {
         'value': 'San Francisco',
         'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_San_Francisco.svg/255px-Flag_of_San_Francisco.svg.png',
-        'subOptions': [],
+        'city': [],
       },
       {
         'value': 'Los Angeles',
         'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Los_Angeles%2C_California.svg/1200px-Flag_of_Los_Angeles%2C_California.svg.png',
-        'subOptions': [],
+        'city': [],
       },
       {
         'value': 'San Diego',
         'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_San_Diego%2C_California.svg/1200px-Flag_of_San_Diego%2C_California.svg.png',
-        'subOptions': [],
+        'city': [],
       },
       {
         'value': 'Tehachapi',
         'logo': 'https://media-cdn.tripadvisor.com/media/photo-s/02/66/e1/91/filename-railroad-watertower.jpg',
-        'subOptions': [],
+        'city': [],
       },
     ]
   },
   {
     'value': 'Japan',
     'logo': 'https://i.pinimg.com/originals/7a/3d/90/7a3d9097761a637b3be29cd0dc6f7971.jpg',
-    'subOptions': [
+    'city': [
       {
         'value': 'Tokyo',
         'logo': 'https://www.crwflags.com/fotw/images/j/jp-13.gif',
-        'subOptions': [],
+        'city': [],
       },
       {
         'value': 'Kyoto',
         'logo': 'https://www.crwflags.com/fotw/images/j/jp-26.gif',
-        'subOptions': [],
+        'city': [],
       },
       {
         'value': 'Osaka',
         'logo': 'https://www.crwflags.com/fotw/images/j/jp-27.gif',
-        'subOptions': [],
+        'city': [],
       },
     ]
   },
   {
     'value': 'Germany',
     'logo': 'https://www.countries-ofthe-world.com/flags-normal/flag-of-Germany.png',
-    'subOptions': [
+    'city': [
       {
         'value': 'Munich',
         'logo': 'https://www.crwflags.com/fotw/images/d/de-ba-m1.gif',
-        'subOptions': [],
+        'city': [],
       },
       {
         'value': 'Berlin',
         'logo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Berlin.svg/1200px-Flag_of_Berlin.svg.png',
-        'subOptions': [],
+        'city': [],
       },
       {
         'value': 'Frankfurt',
         'logo': 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Flag_of_the_Free_City_of_Frankfurt.svg',
-        'subOptions': [],
+        'city': [],
       },
     ]
   },
