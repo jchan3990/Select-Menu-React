@@ -121,6 +121,7 @@ export const countriesObj = [
     'subOptions': [],
   },
 ];
+__SubOption name can be specified by user__
 
 export const countriesArr = [
   [
@@ -203,6 +204,7 @@ export const countriesArr = [
   ]
 ];
 ```
+
 ### Demo
 [![Edit single-select-react-jc](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/angry-mcclintock-d2oi5?file=/src/App.js)
 
@@ -221,6 +223,7 @@ onClick | | {func} | Set parent variable on click
 placeholder | | {string} | Placeholder text
 size | | {enum} | Component width within parent container<br><b>Enums:</b><br>```mini``` ```small``` ```medium``` ```full```
 striped | | {enum} | Alternate striping of menu options<br><b>Enums:</b><br>```lightgrey``` ```lightcyan``` ```lightgreen``` ```lightpink```
+sub | | {string} | User-specified keyword for subcategory
 
 ## Accessibility
 * Tab focuses to component

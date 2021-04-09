@@ -121,6 +121,7 @@ export const countriesObj = [
     'subOptions': [],
   },
 ];
+__SubOption name can be specified by user__
 
 export const countriesArr = [
   [
@@ -203,7 +204,6 @@ export const countriesArr = [
   ]
 ];
 ```
-_
 
 ### Demo
 [![Edit single-select-react-jc](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/angry-mcclintock-d2oi5?file=/src/App.js)
