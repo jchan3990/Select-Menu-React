@@ -128,7 +128,7 @@ const SelectMenu = (props) => {
   } else if (!Array.isArray(currData[0]) && isVisible) {
     optionMenu = (
       <div className="dropdown-menu-container">
-        <OptionsListObj options={currData} combo={[]} level={1} onClick={clickOption} className={optionsClasses} sub={sub}/>
+        <OptionsListObj options={currData} level={1} onClick={clickOption} className={optionsClasses} sub={sub}/>
       </div>
     )
   }
