@@ -6,8 +6,8 @@ const OptionsListArr = ({ options, level, onClick, className }) => {
     <div className='options-container'>
       {options.map((option, idx) => (
         <div key={idx}>
-          <div className='menu-option'>
-            <span style={{marginLeft: "10px", fontFamily: "Arial"}} onClick={() => onClick(option[0])}>{option[0]}</span>
+          <div className='menu-option' onClick={() => onClick(option[0])}>
+            <span style={{marginLeft: "10px", fontFamily: "Arial"}}>{option[0]}</span>
             <img style={{marginRight: "10px"}} src={option[1]} alt={`${option[1]}`} />
           </div>
           <div style={{position: 'relative', left: '25px'}}>

@@ -5,9 +5,9 @@ const OptionsListObj = ({ options, level, onClick, className, sub }) => {
   return (
     <>
       {options.map((option, idx) => (
-        <div key={idx}>
-          <div className='menu-option'>
-            <span style={{marginLeft: "10px", fontFamily: "Arial"}} onClick={() => onClick(option.value)}>{option.value}</span>
+        <div key={option.value}>
+          <div className='menu-option' onClick={() => onClick(option.value)}>
+            <span style={{marginLeft: "10px", fontFamily: "Arial"}}>{option.value}</span>
             <img style={{marginRight: "10px"}} src={option.logo} alt={`${option.value}`} />
           </div>
           <div style={{position: 'relative', left: '25px'}}>
